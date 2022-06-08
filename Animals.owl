@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/director/ontologies/2022/5/Animales"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/director/ontologies/2022/5/Animales">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Animal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Caballo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Carnivoros"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Herbivoros"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Leon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Planta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Tigre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#jirafa"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Es_comido_por"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#come"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Caballo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Leon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tigre"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#jirafa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#vaca"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Animal"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Es_comido_por"/>
+            <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Carnivoros"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Carnivoros"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#come"/>
+            <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Animal"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Herbivoros"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#come"/>
+            <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Planta"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Planta"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Es_comido_por"/>
+            <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Herbivoros"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Caballo"/>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Herbivoros"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Carnivoros"/>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Herbivoros"/>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Leon"/>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Carnivoros"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Tigre"/>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Carnivoros"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#jirafa"/>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Herbivoros"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Animal"/>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Planta"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Es_comido_por"/>
+            <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Carnivoros"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Caballo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#come"/>
+            <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Planta"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Caballo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#come"/>
+            <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Animal"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Leon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#come"/>
+            <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Animal"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Tigre"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#come"/>
+            <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Planta"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#jirafa"/>
+    </ClassAssertion>
+    <SameIndividual>
+        <NamedIndividual IRI="#Caballo"/>
+        <NamedIndividual IRI="#jirafa"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Caballo"/>
+        <NamedIndividual IRI="#vaca"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Leon"/>
+        <NamedIndividual IRI="#Tigre"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#jirafa"/>
+        <NamedIndividual IRI="#vaca"/>
+    </SameIndividual>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Caballo"/>
+        <NamedIndividual IRI="#Leon"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Caballo"/>
+        <NamedIndividual IRI="#Tigre"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Leon"/>
+        <NamedIndividual IRI="#jirafa"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Leon"/>
+        <NamedIndividual IRI="#vaca"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Tigre"/>
+        <NamedIndividual IRI="#jirafa"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Tigre"/>
+        <NamedIndividual IRI="#vaca"/>
+    </DifferentIndividuals>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Es_comido_por"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#come"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#come"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Es_comido_por"/>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Animal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Es_comido_por"/>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Planta"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#come"/>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Carnivoros"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#come"/>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Herbivoros"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Es_comido_por"/>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Carnivoros"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Es_comido_por"/>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Herbivoros"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#come"/>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Animal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#come"/>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Carnivoros"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#come"/>
+        <Class IRI="http://www.semanticweb.org/director/ontologies/2022/5/untitled-ontology-6#Planta"/>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
