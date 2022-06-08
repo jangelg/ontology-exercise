@@ -1,0 +1,89 @@
+!pip install owlready2
+
+import os
+
+from owlready2 import *
+
+onto_path.append("Animals.owl")
+
+onto = get_ontology("Animals.owl")
+onto.load()
+
+print("\nAnimals.owl - Classes:")
+print(list(onto.classes()))
+print("\nAnimals.owl - Individuals:")
+print(list(onto.individuals()))
+print("\nAnimals.owl - Object Properties:")
+print(list(onto.object_properties()))
+
+with onto:
+   class animales(Thing):
+      pass
+	  
+   class Carnivoros(animales):
+      pass
+   
+   class Herbivoros(animales):
+      pass
+	
+	
+print("\nNew class animales IRI:\n" + animales.iri)
+print("\nNew class Carnivoros IRI:\n" + Carnivoros.iri)
+print("\nNew class Carnivoros IS A:\n" + str(Carnivoros.is_a))
+print("\nNew class Carnivoros Ancestors:\n" + str(Carnivoros.ancestors()))
+print("\nNew class Carnivoros Subclasses:\n" + str(list(animales.subclasses())))
+
+pr_ind = animales("cabra")
+
+with onto:
+	class come(ObjectProperty):
+		domain    = [onto.animales]
+		range     = [Herbivoros]
+
+print("\nObject Property 'come' Domain:\n" + str(come.domain))
+print("\nObject Property 'come' Range:\n" + str(come.range))
+
+print("\nNew class Herbivoros IRI:\n" + Herbivoros.iri)
+print("\nNew class Herbivoros IS A:\n" + str(Herbivoros.is_a))
+print("\nNew class Herbivoros Ancestors:\n" + str(Herbivoros.ancestors()))
+print("\nNew class Herbivoros Subclasses:\n" + str(list(animales.subclasses())))
+
+pr_ind = animales("Hiena")
+
+with onto:
+	class come(ObjectProperty):
+		domain    = [onto.animales]
+		range     = [Plantas]
+
+print("\nObject Property 'come' Domain:\n" + str(come.domain))
+print("\nObject Property 'come' Range:\n" + str(come.range))
+with onto:
+    rule = Imp()
+    rule.set_as_rule("""produceEnfermedad(?v, ?e) -> esPeligroso(?v, true)""")
+    sync_reasoner_pellet(infer_property_values = True, infer_data_property_values = True)
+
+print("\n",list(onto.individuals())[2],'...esPeligroso:...',list(onto.individuals())[2].esPeligroso)
+
+onto.save(file = "Animals.owl", format = "rdfxml")
+
+with onto:
+    rule = Imp()
+    rule.set_as_rule("""produceEnfermedad(?v, ?e) -> esPeligroso(?v, true)""")
+    sync_reasoner_pellet(infer_property_values = True, infer_data_property_values = True)
+
+print("\n",list(onto.individuals())[2],'...esPeligroso:...',list(onto.individuals())[2].esPeligroso)
+
+onto.save(file = "Animals.owl", format = "rdfxml")
+with onto:
+    rule = Imp()
+    rule.set_as_rule("""produceEnfermedad(?v, ?e) -> esPeligroso(?v, true)""")
+    sync_reasoner_pellet(infer_property_values = True, infer_data_property_values = True)
+
+print("\n",list(onto.individuals())[2],'...esPeligroso:...',list(onto.individuals())[2].esPeligroso)
+
+onto.save(file = "Animals.owl", format = "rdfxml")
+
+with onto:
+	sync_reasoner(infer_property_values = True)
+
+print(list(default_world.inconsistent_classes()))
